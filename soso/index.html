@@ -60,9 +60,8 @@ body[class*=background-img-]{background-size:cover;background-repeat:no-repeat;b
 
 
 <!--头部 over-->
+<!-- 侧导航 -->
 
-        <!-- 侧导航 -->
-        
 <nav class="pcoded-navbar menu-light  ">
   <div class="navbar-wrapper  ">
     <div class="navbar-content scroll-div ">
@@ -130,10 +129,9 @@ body[class*=background-img-]{background-size:cover;background-repeat:no-repeat;b
     </div>
   </div>
 </nav>
-        <!--侧导航 over-->
-
-        <!-- 顶导航 -->
-        <!-- [ 顶部/标头 ]  start -->
+<!--侧导航 over-->
+<!-- 顶导航 -->
+<!-- [ 顶部/标头 ]  start -->
 <header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue ">
     <div class="m-header">
         <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
@@ -174,10 +172,10 @@ body[class*=background-img-]{background-size:cover;background-repeat:no-repeat;b
 
 </header>
 <!-- [ 顶部/标头 ] end -->
-        <!--顶导航 over-->
-
-        <!-- 内容 -->
-<section class="pcoded-main-container" id="content">
+<!--顶导航 over-->
+<!-- 内容 -->
+<section class="pcoded-main-container"
+         id="content">
     <div class="pcoded-content">
         <div class="row">
             <div class="col-md-12">
@@ -191,15 +189,28 @@ body[class*=background-img-]{background-size:cover;background-repeat:no-repeat;b
 										
                 <!-- [ 公告 ] end -->
                 <!-- [清单] start -->
-                <main class="h-v-75">
-                    <div class="container">
-                        <div class="row list-grouped">
-                            <!-- 分类列表 -->
-                            
-                            <!-- 分类列表 / -->
-                        </div>
+                <div class="wrapper">
+                    <div class="search my-5">
+                        <input type="text" name="s" class="inp form-control border-0 shadow-none" placeholder="请输入关键词搜索" style="background:;">
                     </div>
-                </main>
+
+                    <div class="user">
+                       
+                    </div>
+
+                    <h3 class="prompt" style="display: none;">空空如也</h3>
+                </div>
+
+                <script>
+                    function createStore(c) { var b = []; function a() { return c } function e(f) { c[f.type] = f.value; b.forEach(function (h, g) { h() }) } function d(f) { b.push(f) } return { getState: a, change: e, addFn: d } };
+                </script>
+                <script>
+                    var person = JSON.parse('{"posts":[{"title":"关于","content":"屌丝站长一枚，这是我的笔记文字仓库。 ","link":"https://www.555585.xyz/post/about/"},{"title":"Hello Gridea","content":"👏 欢迎使用 Gridea ！ ✍️ Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ... Github Gridea 主页 示例网站 特性👇 📝 你可以使用最酷的 Markdown 语法，进行快速创作 🌉 你可以给文章配上精美的封面图和在文章任意位置插入图片 🏷️ 你可以对文章进行标签分组 📋 你可以自定义菜单，甚至可以创建外部链接菜单 💻 你可以在 𝖶𝗂𝗇𝖽𝗈𝗐𝗌 或 𝖬𝖺𝖼𝖮𝖲 设备上使用此客户端 🌎 你可以使用 𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌 或 Coding Pages 向世界展示，未来将支持更多平台 💬 你可以进行简单的配置，接入 Gitalk 或 DisqusJS 评论系统 🇬🇧 你可以使用中文简体或英语 🌁 你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力 🖥 你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步 🌱 当然 Gridea 还很年轻，有很多不足，但请相信，它会不停向前🏃 未来，它一定会成为你离不开的伙伴 尽情发挥你的才华吧！ 😘 Enjoy~ ","link":"https://www.555585.xyz/post/hello-gridea/"}]}');
+                    var inp = document.getElementsByClassName("inp")[0], btnList = document.getElementsByClassName("btn-list")[0], prompt = document.getElementsByClassName("prompt")[0], user = document.getElementsByClassName("user")[0]; function createList(a) { var b = ""; a.forEach(function (d, c) { b += '<div class="list-box"><div class="card list-item block card-plain"><div class="list-content"><div class="list-body"><a href="' + d.link + '" class="list-title text-lg h-2x">' + d.title + '</a><div class="list-desc d-none d-md-block text-sm text-secondary my-3"><div class="h-2x ">' + d.content + "</div></div></div></div></div></div>" }); user.innerHTML = b };
+                    createList(person.posts); var state = createStore({ text: "", sex: "all" }); state.addFn(function () { createList(perArr()); anti(show()) }); inp.oninput = anti(getInput, 1000);
+                    function getInput() { state.change({ type: "text", value: this.value }) } function anti(a, b) { var c = null; return function () { var d = this, e = arguments; clearTimeout(c); c = setTimeout(function () { a.apply(d, e) }, b) } } function show() { if (user.children.length == 0) { prompt.style.display = "block" } else { prompt.style.display = "none" } } function addFn(b, a) { return function () { var c = a; for (prop in b) { c = b[prop](state.getState()[prop], c) } return c } } var perArr = addFn({ text: filterText, sex: filterSex }, person.posts); btnList.onclick = function (b) { var a = b.target; if (a.tagName == "LI") { document.getElementsByClassName("active")[0].className = ""; a.className = "active"; state.change({ type: "sex", value: a.getAttribute("sex") }) } }; function filterText(b, a) { return a.filter(function (d, c) { if (d.title.indexOf(b) != -1 || d.content.indexOf(b) != -1) { return true } }) } function filterSex(b, a) { if (b == "all") { return a } else { return a.filter(function (d, c) { if (d.sex == b) { return true } }) } };
+                </script>
+
                 <!-- [清单] end -->
             </div>
         </div>
@@ -229,10 +240,10 @@ var _hmt = _hmt || [];
 </footer>
     <!-- [ 版权 ] end -->
 </section>
-        <!--内容 over-->
+<!--内容 over-->
 
-    <!-- 尾部 -->
-    </div>
+<!-- 尾部 -->
+</div>
 <!--定义全局变量--> 
 <script type="text/javascript">
 window.THEME_URL = 'https://www.555585.xyz'; //获取域名地址 
@@ -333,4 +344,4 @@ window.IS_SLIDER = 1;
 </body>
 
 </html>
-    <!--尾部 over-->
+<!--尾部 over-->
