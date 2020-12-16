@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="https://www.555585.xyz/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="温故而知新"><meta charset="UTF-8"><title>Archives | Gridea</title>
+    <link rel="shortcut icon" href="https://www.555585.xyz/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="温故而知新"><meta charset="UTF-8"><title>Gridea</title>
 <link href="https://www.555585.xyz/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://www.555585.xyz/media/css/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://www.555585.xyz/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
 <script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
 
+    <script src="/media/gridea-search/fuse.js"></script>
+    <script src="/media/gridea-search/ejs.min.js"></script>
+    <script src="/media/gridea-search/gridea-search.js"></script>
+    <script src="/media/gridea-search/result-template.ejs" type="text/ejs"></script>
 </head>
 <body>
-<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+    <style>
+        .searched-keyword {
+            background-color: yellow;
+        }
+    </style>
+    <div class="main animated">
+        <div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
 <noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://www.555585.xyz"><img alt="logo" style="display:inline-block;" src="https://www.555585.xyz/images/avatar.png"/></a><h1 title="Gridea" class="weaklink"><a  href="/">Gridea</a></h1>
 
 <div class="navbar weaklink">
@@ -20,13 +30,14 @@
 </div></div>
 <script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
 
-<div class="main"><div class="main-inner"><div class="content"><div class="round-shape-one"></div>
-
-
-<div class="list_with_title"><div class="listing_title">2019</div><div class="listing"><div class="listing-item"><div class="listing_post"><a href="https://www.555585.xyz/post/about/"title="关于">关于</a><div class="post_date"><span class="date">2019-01-25</span></div></div></div><br></div>
-<div class="list_with_title"><div class="listing_title">2018</div><div class="listing"><div class="listing-item"><div class="listing_post"><a href="https://www.555585.xyz/post/hello-gridea/"title="Hello Gridea">Hello Gridea</a><div class="post_date"><span class="date">2018-12-12</span></div></div></div><br></div></div><div style="width:100%;overflow:hidden">
-</div></div></div></div>
-<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a><script>
+		<div class="main"><div class="main-inner"><div class="content"><div class="round-shape-one"></div>
+        <div id="gridea-search-result">	
+            <p class="searching">搜索中......</p>
+            <p class="no-result" style="display:none">未搜索到相关文章</p>
+        </div>
+		</div></div></div>
+    </div>
+    <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a><script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
