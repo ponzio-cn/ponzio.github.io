@@ -2,21 +2,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.555585.xyz</id>
     <title>555585.xyz</title>
-    <updated>2020-12-16T15:16:18.164Z</updated>
+    <updated>2022-01-03T08:55:17.264Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.555585.xyz"/>
     <link rel="self" href="https://www.555585.xyz/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://www.555585.xyz/images/avatar.png</logo>
     <icon>https://www.555585.xyz/favicon.ico</icon>
-    <rights>All rights reserved 2020, 555585.xyz</rights>
+    <rights>All rights reserved 2022, 555585.xyz</rights>
+    <entry>
+        <title type="html"><![CDATA[丰巢智能柜迷之寄件]]></title>
+        <id>https://www.555585.xyz/post/feng-chao-zhi-neng-ju-mi-zhi-ji-jian/</id>
+        <link href="https://www.555585.xyz/post/feng-chao-zhi-neng-ju-mi-zhi-ji-jian/">
+        </link>
+        <updated>2022-01-03T07:10:44.000Z</updated>
+        <summary type="html"><![CDATA[<p>丰巢智能柜的18小时免费保管已经被很多人吐槽过了，我也被坑过好几次，比如在18小时内快递柜取不出件，非得等到第二天一早就能取，算时间24小时都过了，不得不付费。但不管是自愿还是被迫，毕竟用了人家的服务，付费就付费吧。这回我想换个吐槽的点，我非常非常想不满丰巢智能柜寄件的蜜汁操作...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>丰巢智能柜的18小时免费保管已经被很多人吐槽过了，我也被坑过好几次，比如在18小时内快递柜取不出件，非得等到第二天一早就能取，算时间24小时都过了，不得不付费。但不管是自愿还是被迫，毕竟用了人家的服务，付费就付费吧。这回我想换个吐槽的点，我非常非常想不满丰巢智能柜寄件的蜜汁操作...</p>
+<!-- more -->
+<p>事情得从在拼夕夕买的一套恒温杯垫礼盒说起，东西到手一看套装礼盒已经被挤变了形，我心说不能送人只能自用了。然而还是想简单了，打开礼盒一看，杯子底部裂缝可滴水、杯垫表面破裂，无奈之下只能选择退货。拼夕夕倒是爽快，申请售后可以直接包邮退回，寄回的方式可以选上门取件和丰巢寄件，我一想白天上班没空在家等上门，就选择了丰巢寄件。</p>
+<p>等到晚上下班去快递柜寄件，谜一样的寄件流程开始了。因为拼夕夕生成了一个寄件码，那就不能扫快递柜的码寄件了，只能手输寄件码，输入完系统跳出一个提示要求实名认证，那就扫码认证吧。看了一眼快递柜提示的右上角有个时间限制30秒。这第一次的30秒要输手机号和身份证、上传面部照片、以及核验身份，时间肯定不够，但都开始认证了那就继续吧，大不了再来一次。一套流程下来早就过了30秒，认证通过，但是快递柜上那个等待提示消失了，也没有柜门打开。</p>
+<p>于是第二次输寄件码，再次弹出了要求认证，这回时间还是30秒，只要扫码、填手机号、收验证码、填验证码四个操作，按说应该来得及，偏偏在发验证码之前手机上又跳出一个图形验证码，并且有一句提示“请先输入图形验证码”，这句话弹出在手机上停了至少3秒，这期间是无法打字输入的，等它消失再看时间，还剩不到15秒。输入这个图形验证码，等待手机收到验证码，再输入手机验证码，急急忙忙操作完，已经超时，快递柜那个提示又消失了，依旧没有柜门打开。此刻我满脑子黑人问号，是我手速不够快吗？再来！一次又一次，一样的操作，起码试了有七八次，都是一样的结果。我感觉我陷入了死循环，最终只能选择放弃。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于]]></title>
         <id>https://www.555585.xyz/post/about/</id>
         <link href="https://www.555585.xyz/post/about/">
         </link>
         <updated>2019-01-25T11:09:48.000Z</updated>
+        <summary type="html"><![CDATA[<p>屌丝站长一枚，这是我的笔记文字仓库。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>屌丝站长一枚，这是我的笔记文字仓库。</p>
+<!-- more -->
 ]]></content>
     </entry>
     <entry>
