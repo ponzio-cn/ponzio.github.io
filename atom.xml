@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.555585.xyz</id>
     <title>555585.xyz</title>
-    <updated>2022-01-04T06:48:28.412Z</updated>
+    <updated>2022-01-04T06:52:50.425Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.555585.xyz"/>
     <link rel="self" href="http://www.555585.xyz/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>http://www.555585.xyz/images/avatar.png</logo>
     <icon>http://www.555585.xyz/favicon.ico</icon>
     <rights>All rights reserved 2022, 555585.xyz</rights>
+    <entry>
+        <title type="html"><![CDATA[YiboCMS第一次部署上线遇到的问题]]></title>
+        <id>http://www.555585.xyz/post/yibocms-di-yi-ci-bu-shu-shang-xian-yu-dao-de-wen-ti</id>
+        <link href="http://www.555585.xyz/post/yibocms-di-yi-ci-bu-shu-shang-xian-yu-dao-de-wen-ti">
+        </link>
+        <updated>2022-01-04T06:51:50.000Z</updated>
+        <content type="html"><![CDATA[<p>1.大小写问题，自定义的setting.php文件因上传到Centos出现“Class xx/xx/Setting not found”的问题，改大写Setting.php后正常<br>
+2.Class 'Yii\db\Query' not found 问题，Yii是全局类要加, \yii\db\Query() 正常<br>
+3.伪静态失效，因本地为Apache，线上环境为Ngingx，宝塔网站设置内添加规则</p>
+<h1 id="redirect-everything-that-isnt-a-real-file-to-indexphp">Redirect everything that isn&quot;t a real file to index.php</h1>
+<pre><code>try_files $uri $uri/ /index.php$is_args$args;
+</code></pre>
+<p>4.Class 'yii\base\widget' not found 改为 use yii\bootstrap4\Widget; 且extends Widget后正常<br>
+5.Mysql无法连接问题，因端口修改过，加上端口后正常。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[丰巢智能柜迷之寄件]]></title>
         <id>http://www.555585.xyz/post/feng-chao-zhi-neng-ju-mi-zhi-ji-jian</id>

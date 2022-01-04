@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<title>YiboCMS第一次部署上线遇到的问题 | 555585.xyz</title>
+<link rel="shortcut icon" href="http://www.555585.xyz/favicon.ico">
+<link href="http://www.555585.xyz/styles/main.css" rel="stylesheet">
+<link href="//at.alicdn.com/t/font_1678829_7cn41ho9lyt.css" rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="555585.xyz » Feed" href="http://www.555585.xyz/atom.xml">
+        <meta name="description" content="1.大小写问题，自定义的setting.php文件因上传到Centos出现“Class xx/xx/Setting not found”的问题，改大写Setting.php后正常
+2.Class 'Yii\db\Query' not fou..." />
+        <meta name="keywords" content="" />
+</head>
+
+<body>
+    <div class="main animated">
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <a href="http://www.555585.xyz">555585.xyz</a>
+        </div>
+    </div>
+    <div class="my_socials">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        <a href="http://www.555585.xyz/atom.xml" target="_blank"><i class="iconfont icon-rss"></i></a>
+    </div>
+</div>
+
+    <div class="header_menu">
+        
+            
+                <a href="/" class="menu">首页</a>
+            
+        
+            
+                <a href="/archives" class="menu">归档</a>
+            
+        
+            
+                <a href="/tags" class="menu">标签</a>
+            
+        
+            
+                <a href="/post/about" class="menu">关于</a>
+            
+        
+        <div class="gridea-search-div">
+            <form id="gridea-search-form" action="http://www.555585.xyz/search/">
+                <input class="gridea-search-input" autocomplete="off" spellcheck="false" name="q"/>
+            </form>
+        </div>
+    </div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+                    <div class="post_page">
+                        <div class="post animated fadeInDown">
+                            <div class="post_title post_detail_title">
+                                <h2><a>
+                                        YiboCMS第一次部署上线遇到的问题
+                                    </a></h2>
+                                <span class="article-info">
+                                    2022-01-04, 145 words, 1 min read
+                                </span>
+                            </div>
+                            <div class="post_content markdown">
+                                <p class="md_block">
+                                    <span class="md_line md_line_start md_line_end">
+                                        <p>1.大小写问题，自定义的setting.php文件因上传到Centos出现“Class xx/xx/Setting not found”的问题，改大写Setting.php后正常<br>
+2.Class 'Yii\db\Query' not found 问题，Yii是全局类要加, \yii\db\Query() 正常<br>
+3.伪静态失效，因本地为Apache，线上环境为Ngingx，宝塔网站设置内添加规则</p>
+<h1 id="redirect-everything-that-isnt-a-real-file-to-indexphp">Redirect everything that isn&quot;t a real file to index.php</h1>
+<pre><code>try_files $uri $uri/ /index.php$is_args$args;
+</code></pre>
+<p>4.Class 'yii\base\widget' not found 改为 use yii\bootstrap4\Widget; 且extends Widget后正常<br>
+5.Mysql无法连接问题，因端口修改过，加上端口后正常。</p>
+<br />
+                                            
+                                </p>
+                            </div>
+                            <div class="post_footer">
+                                
+                                        
+                                            <div class="next-post" style="margin-top: 20px;">
+                                                <div class="next">下一篇</div>
+                                                <a href="http://www.555585.xyz/post/feng-chao-zhi-neng-ju-mi-zhi-ji-jian">
+                                                    <h3 class="post-title">
+                                                        丰巢智能柜迷之寄件
+                                                    </h3>
+                                                </a>
+                                            </div>
+                                            
+                            </div>
+                        </div>
+                        
+                            
+                                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container" style="padding-bottom: 20px;"></div>
+<script>
+    var pageId = (location.pathname).substring(1, 49) // Ensure uniqueness and length less than 50
+    pageId = pageId.endsWith('/') ? pageId.slice(0, -1) : pageId // 以斜杠结尾则去除
+    var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: pageId,
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+                                    
+                                        
+                                                    
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="footer">
+    
+    <div class="powered_by">
+        <a href="https://github.com/tangkaichuan/gridea-theme-one" target="_blank">Theme One,</a>
+        <a href="https://gridea.dev/" target="_blank">Powered by Gridea&#65281;</a>
+    </div>
+    <div class="footer_slogan">
+        温故而知新
+    </div>
+    <div id="back_to_top" class="back_to_top">
+        <span>△</span>
+    </div>
+    
+</div>
+
+<script src="http://www.555585.xyz/media/scripts/util.js"></script>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css">
+        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+</body>
+
+</html>
